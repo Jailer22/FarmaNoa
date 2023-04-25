@@ -1,0 +1,27 @@
+.upload {
+    width: 249px;
+    background: #ebebeb;
+    padding: 9px;
+    border: solid 1px #ebebeb;
+    margin-right: 9px;
+    height: 121px;
+    margin-top: -110px;
+    margin-left: 218px;
+    display: block;
+}
+
+.selectfile {
+    margin-top: 15px;
+}
+
+.btn{
+    margin-top:10px;
+    border-radius: 1px 1px 1px 0px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    height: 36px;
+}

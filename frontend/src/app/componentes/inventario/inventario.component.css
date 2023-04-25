@@ -1,0 +1,8 @@
+.ventanaflotante{
+    position: absolute;
+    background: rgb(200, 213, 218);
+    top:60px;
+    left:185px;
+    width: calc(100% - 185px);
+    height: calc(100vh - 80px);
+}

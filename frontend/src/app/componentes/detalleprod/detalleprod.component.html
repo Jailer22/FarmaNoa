@@ -1,0 +1,45 @@
+<app-menu></app-menu>
+<app-header></app-header>
+<!-- Carrito -->
+   <div class="container">
+        <div class="row">
+            <div id="items" class="col-sm-8">
+                <img src="http://localhost:3000/productos/{{Id}}.png" class="imgProd" >
+            </div>
+            <aside class=" col-12 col-sm-4">
+                <h2>{{nombre}}</h2>
+                <h3>{{valor | currency}}</h3>
+                <ul class="list-group"></ul>
+                <hr>
+                <div class="container-input">
+                <!-- Boton - -->
+                <button style="font-size: 1.3rem; border-radius: 10px 0px 0px 10px;" type="button" 
+                data-field-qty="qty" class="btn btn-primary btn-number 
+                product_quantity_down" disabled="disabled" data-type="minus" data-field="quant[1]">
+                <span class="input-number-decrement">-</span>
+                </button>
+                <!-- Input cantidad -->
+                <input style="padding: 5px;" type="text" id="qtaPrt" name="qty" 
+                class="form-control input-number text-center input-group" 
+                data-field-can="quant[1]" value="1" min="1" max="1" width="150px">
+                <!-- Boton + -->
+                <button style="font-size: 1.3rem;border-radius: 0px 10px 10px 0px;" type="button" data-field-qty="qty" 
+                class="btn btn-primary btn-number product_quantity_up" data-type="plus" data-field="quant[1]">
+                <span class="input-number-increment">+</span>
+                </button>
+                <div class="separador"></div>
+                <button id="boton-vaciar" class="btn btn-primary">Comprar</button>
+                </div>
+                <h4 class="text-right">Total: <span id="total"></span>{{valor | currency}}</h4>
+            </aside>
+        </div>
+    </div>
+    <div class="shadow p-3 mb-5 bg-white rounded">
+    <div class="container-descripcion" >
+    <div class="row-descripcion" >
+        <h1>Detalles del producto</h1>  
+            <p> {{descripcion}}</p>
+    </div>
+</div>
+</div>
+<app-footer></app-footer>

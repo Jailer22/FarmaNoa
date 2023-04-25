@@ -1,0 +1,130 @@
+div#menulat     {
+    width: 185px;
+    height: 120vh;
+    position: absolute;
+    display: block;
+    background:#036bf3;
+    color:#ebebeb;
+    border: solid 2px #036bf3;
+    
+}
+
+.labelNom {
+    margin-top: 5px;
+}
+
+.lblnombre { 
+    color: #ebebeb;
+    font-size: xx-large;
+    display:block;
+    position: absolute;
+    margin-left: 25%;   
+    padding-top: 16px;
+    text-align: center;
+   
+}
+
+img{
+    width: 150px;
+    height: 59px;
+    margin-left: 20px;
+    margin-top: 14px;
+}
+
+.item {
+    width: 96%;
+    height: 52px;
+    padding-left: 20px;
+    cursor: pointer;
+    background-color: #036bf3;
+    padding-top: 15px;
+    margin-top: 19px;
+    top: 15px;
+}
+
+.item:hover {
+    height: 60px;
+    padding-left: 20px;
+    background-color: #0a90b9;
+    border-radius: 1px #ffff;
+    transition-property: widht, height;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+    -webkit-transform:scale(.1);
+    transform:scale(1.1);
+}
+
+.subitem{
+    display:none;
+
+}
+
+.item:hover > .subitem{
+    display: block;
+}
+
+div#Datos{
+    position: absolute;
+    right: 0px;
+    height: 100px;
+    width: calc(100% - 185px);
+    background: #036bf3;
+}
+
+button#btnCerrarSesion{
+    border-radius: 5px;
+    background-color: #03409c;
+    border: none;
+    position: absolute;
+    right: 10px;
+    height: 35px;
+    width: 140px;
+    color: #ffff;
+    margin-top: 30px;
+}
+
+button#btnCerrarSesion:hover{
+    background-color: #044ebe;
+    border: none;
+    transition-property: widht, height;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+    -webkit-transform:scale(.1);
+    transform:scale(1.1);
+}
+
+.logo{
+    width: 185px;
+    height: 60px;
+}
+
+svg.svg-inline--fa {
+    height: 20px;
+    left: 70%;
+    position: relative;
+    top: -21px;
+    box-shadow: #ebebeb;
+}
+
+.fa-arrow-right-from-bracket{
+    height: 20px;
+    position: relative;
+    box-shadow: #ebebeb;
+}
+
+svg.svg-inline--fa:hover{
+    color: rgb(58, 205, 241);
+    transition-property: widht, height;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+    -webkit-transform:scale(.1);
+    transform:scale(1.1);
+}
+
+#logout{
+    top: 90%;
+    position: absolute;
+}

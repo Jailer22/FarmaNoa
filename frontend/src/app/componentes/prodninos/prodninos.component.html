@@ -1,0 +1,18 @@
+<app-menu></app-menu>
+<app-header></app-header>
+<div class="container">
+  <div class="row" >
+      <div class="itemprod col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 separador " routerLink="/detalleprod/{{item._id}}"  *ngFor="let item of listadatos">
+        <a class="btn-flotante" href="https://web.whatsapp.com/send/?phone=573015307454&text= Hola Farmanoa! Me interesa comprar este producto: {{item.nombre}}" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i></a>
+          <img class="ImgPro" src="http://localhost:3000/productos/{{item._id}}.png" width="90%" height="60%">
+          <h5>{{item.nombre}}</h5>
+          <p>{{item.categoria}}</p> 
+          <h6>{{item.valor | currency}} </h6>
+          <button id="btn-comprar" class="btn-comprar btn-comprar-white add-to-cart" 
+            title="Añadir al carrito " data-button-action="add-to-cart" 
+            type="submit">Ver producto</button>
+      </div>  
+  </div> 
+</div>
+<app-footer></app-footer>

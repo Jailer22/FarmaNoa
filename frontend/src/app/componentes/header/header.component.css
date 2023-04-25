@@ -1,0 +1,194 @@
+
+#pills-dispensario-tab{
+    align-items: center;
+    border-bottom: 5px #6c0ee7 solid;
+    overflow: hidden;
+    background-color: #6c0ee7 solid;
+    padding: 5px 15px;
+    height: 50px;
+    width: 170px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+}
+
+#pills-dispensario-tab:hover{
+    border-bottom: 5px #6c0ee7 solid;
+    background-color: #6c0ee7 ;
+    color: #ffff;
+}
+
+#pills-Ofertas-tab{
+    align-items: center;
+    border-bottom: 5px #04c75c solid;
+    overflow: hidden;
+    background-color: #04c75c solid;
+    padding: 5px 15px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+
+}
+
+#pills-Ofertas-tab:hover{
+    border-bottom: 5px #04c75c solid;
+    background-color: #04c75c ;
+    color: #ffff;
+}
+
+#pills-cuidado_pers-tab{
+    align-items: center;
+    border-bottom: 5px #e738f7 solid;
+    overflow: hidden;
+    background-color: #e738f7 solid ;
+    padding: 5px 15px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+
+}
+
+#pills-cuidado_pers-tab:hover{
+    border-bottom: 5px #e738f7 solid;
+    background-color: #e738f7 ;
+    color: #ffff;
+}
+
+#pills-nutricionales-tab{
+    align-items: center;
+    border-bottom: 5px #ddb70b solid;
+    overflow: hidden;
+    background-color: #ddb70b solid ;
+    padding: 5px 15px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+}
+ 
+
+#pills-nutricionales-tab:hover{
+    border-bottom: 5px #ddb70b solid;
+    background-color: #ddb70b ;
+    color: #ffff;
+}
+
+#pills-niños-tab{
+    align-items: center;
+    border-bottom: 5px #41dee4 solid;
+    overflow: hidden;
+    background-color: #41dee4 solid ;
+    padding: 5px 15px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+}
+
+#pills-niños-tab:hover{
+    border-bottom: 5px #41dee4 solid;
+    background-color: #41dee4 ;
+    color: #ffff;
+}
+#pills-cuidado_piel-tab{
+    align-items: center;
+    border-bottom: 5px #2c7fcc solid;
+    background-color: #ffff ;
+    overflow: hidden;
+    background-color: #2c7fcc solid ;
+    padding: 5px 15px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+}
+
+#pills-cuidado_piel-tab:hover{
+    border-bottom: 5px #2c7fcc solid;
+    background-color: #2c7fcc ;
+    color: #ffff;
+}
+
+#pills-medicamentos-tab{
+    align-items: center;
+    border-bottom: 5px #209997 solid;
+    background-color: #ffff ;
+    overflow: hidden;
+    background-color: #209997 solid ;
+    padding: 5px 15px;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+
+}
+
+#pills-medicamentos-tab:hover {
+    border-bottom: 5px #209997 solid;
+    background-color: #209997 ;
+    color: #ffff;
+}
+
+
+a {
+    justify-content: center;
+    color: #8f8e8e;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover{
+    color: #4b4a4a
+}
+
+.btn #btn-buscar{
+     color: #4b4a4a
+}
+
+/*Menú horizontal*/
+
+
+
+.nav {
+    flex-wrap: wrap;
+    padding-left: 0;
+    cursor: pointer;
+    border-radius: 0;
+    height: 120px;
+    align-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    margin-block-end: 47x;
+    list-style: none;
+    justify-content: center;
+    border-radius: 0;
+    margin-top: 0px;
+    
+}
+
+.nav-link {
+    display: block;
+    margin: 2px;
+    margin-top: 1px;
+  }
+  
+body {
+    background: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}

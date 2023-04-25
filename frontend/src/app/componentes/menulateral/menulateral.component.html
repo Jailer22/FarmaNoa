@@ -1,0 +1,26 @@
+
+<div id="Datos">
+    <div class="lblnombre">Administración - Farmanoa</div>
+    <button id="btnCerrarSesion" (click)="CerrarSesion()" >Cerrar sesión<i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+</div>
+<div id="menulat" >
+    <div class="contenedorlogo">
+        <img id="imglogo" src="/assets/Imagenes/Logo Farmanoa.png" alt="">
+    </div>
+
+    <div class="item" >
+        <div class="labelNom" routerLink="/dashboard" >Dashboard</div><i class="fa-solid fa-chart-line"></i>
+    </div>
+    <div class="item" >
+        <div class="labelNom" routerLink="/usuarios">Usuarios</div><i class="fa-solid fa-users"></i>
+    </div>
+    <div class="item" >
+        <div class="labelNom" routerLink="/agregarprod">Productos</div><i class="fa-solid fa-capsules"></i>
+    </div>
+    <div class="item" id="logout" >
+        <div class="labelNom" (click)="CerrarSesion()">Cerrar sesión</div><i class="fa-solid fa-right-from-bracket"></i>
+    </div>
+    <!-- <div class="item" *ngFor="let item of datosmenu">
+        <div class="labelNom" routerLink={{item.destino}}>{{item.nombre}}</div>
+    </div> -->
+</div>

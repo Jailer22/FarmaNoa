@@ -1,0 +1,46 @@
+.ventanaflotante{
+    position: absolute;
+    background: linear-gradient(#6c96ce, #88bee2, #0c4f9c);
+    top:90px;
+    left:185px;
+    width: calc(100% - 185px);
+    height: calc(100vh - 90px);
+}
+.Container-subir{
+    display: block;
+
+}
+
+.upload {
+    width: 249px;
+    background: #e44a4a;
+    padding: 9px;
+    border: solid 1px #ebebeb;
+    margin-right: 9px;
+    height: 121px;
+    margin-top: -50px;
+    margin-left: 218px;
+    display: block;
+}
+
+img.imgprod {
+    width: 91px;
+    height: 91px;
+    border-radius: 9px;
+    padding: 2px;
+}
+
+img.vistaPrev {
+    width: 100%;
+    margin-top: 35px;
+}
+
+.table-dark {
+    color: #fff;
+    background-color: #212529;
+    
+}
+
+table {
+    scroll-snap-align: left;
+}

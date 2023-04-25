@@ -1,0 +1,39 @@
+.container-footer {
+    width: 100%;
+    background: #1e65c2;
+    color: #dfd3d3;
+    margin-top: 35px;
+    text-align: center;
+    align-content: center;
+    height: auto;
+
+}
+
+a{
+    color: #dfd3d3;
+    margin-top: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    margin-top: 25px;
+}
+
+.iconos img{
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    padding-right: 50px;
+    color: #ffff;
+    align-content: center;
+    margin-left: 15px;
+    margin-right: -35px;
+    cursor: pointer;
+}
+
+#imgfac{
+    filter: invert(100%);
+}

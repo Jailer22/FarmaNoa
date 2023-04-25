@@ -1,0 +1,7 @@
+div#bloquemensajes {
+    margin-top: 90px;
+    position: absolute;
+    width: 20%;
+    right: 0px;
+    z-index: 9999999999;
+}

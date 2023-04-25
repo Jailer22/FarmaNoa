@@ -1,0 +1,22 @@
+.rr-widget[data-s="6283e61d3d542fb18182bfad"] .rr-items {
+    position: relative;
+    overflow: hidden;
+    padding: 23px 20px 35px;
+    z-index: 1;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.rr-widget[data-s="6283e61d3d542fb18182bfad"] * {
+    outline: none;
+}
+.elementor *, .elementor :after, .elementor :before {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+user agent stylesheet
+div {
+    display: block;
+}

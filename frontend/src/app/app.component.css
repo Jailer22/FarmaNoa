@@ -1,0 +1,374 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+#pills-dispensario-tab{
+    align-items: center;
+    border-bottom: 5px #6c0ee7 solid;
+    overflow: hidden;
+    background-color: #6c0ee7 solid;
+    padding: 5px 15px;
+    height: 50px;
+    width: 170px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+}
+
+#pills-dispensario-tab:hover{
+    border-bottom: 5px #6c0ee7 solid;
+    background-color: #6c0ee7 ;
+    color: #ffff;
+}
+
+#pills-Ofertas-tab{
+    align-items: center;
+    border-bottom: 5px #04c75c solid;
+    overflow: hidden;
+    background-color: #04c75c solid;
+    padding: 5px 15px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+
+}
+
+#pills-Ofertas-tab:hover{
+    border-bottom: 5px #04c75c solid;
+    background-color: #04c75c ;
+    color: #ffff;
+}
+
+#pills-cuidado_pers-tab{
+    align-items: center;
+    border-bottom: 5px #e738f7 solid;
+    overflow: hidden;
+    background-color: #e738f7 solid ;
+    padding: 5px 15px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+
+}
+
+#pills-cuidado_pers-tab:hover{
+    border-bottom: 5px #e738f7 solid;
+    background-color: #e738f7 ;
+    color: #ffff;
+}
+
+#pills-nutricionales-tab{
+    align-items: center;
+    border-bottom: 5px #ddb70b solid;
+    overflow: hidden;
+    background-color: #ddb70b solid ;
+    padding: 5px 15px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+}
+ 
+
+#pills-nutricionales-tab:hover{
+    border-bottom: 5px #ddb70b solid;
+    background-color: #ddb70b ;
+    color: #ffff;
+}
+
+#pills-niños-tab{
+    align-items: center;
+    border-bottom: 5px #41dee4 solid;
+    overflow: hidden;
+    background-color: #41dee4 solid ;
+    padding: 5px 15px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+}
+
+#pills-niños-tab:hover{
+    border-bottom: 5px #41dee4 solid;
+    background-color: #41dee4 ;
+    color: #ffff;
+}
+#pills-cuidado_piel-tab{
+    align-items: center;
+    border-bottom: 5px #2c7fcc solid;
+    background-color: #ffff ;
+    overflow: hidden;
+    background-color: #2c7fcc solid ;
+    padding: 5px 15px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+}
+
+#pills-cuidado_piel-tab:hover{
+    border-bottom: 5px #2c7fcc solid;
+    background-color: #2c7fcc ;
+    color: #ffff;
+}
+
+#pills-medicamentos-tab{
+    align-items: center;
+    border-bottom: 5px #209997 solid;
+    background-color: #ffff ;
+    overflow: hidden;
+    background-color: #209997 solid ;
+    padding: 5px 15px;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+
+}
+
+#pills-medicamentos-tab:hover {
+    border-bottom: 5px #209997 solid;
+    background-color: #209997 ;
+    color: #ffff;
+}
+
+
+a {
+    justify-content: center;
+    color: #8f8e8e;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover{
+    color: #4b4a4a
+}
+
+.btn #btn-buscar{
+     color: #4b4a4a
+}
+
+/*Menú horizontal*/
+
+.nav-link.active,
+  .show > .nav-link {
+    color: none;
+    background-color: none;
+  }
+
+.nav {
+   
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0;
+    background-color: none;
+    display: flex;
+    height: 135px;
+    margin-top: 10px;
+    margin-top: 10px;
+    align-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    margin-block-end: 35px;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+/**carousel principal*/
+
+.carousel-item {
+    top: 0px;
+}
+
+.carousel-inner .carousel-item img{
+    width: 100%; 
+    height: 400px;
+}
+
+.nav-pills .nav-link {
+    margin-top: 0px;
+    border-radius: 0;
+}
+
+img#imglogo {
+    width: 180px;
+    height: 80px;
+    float: left;
+    margin-top: -10px;
+    border-radius: 5px;
+    padding-top: 0px;
+    padding-right: 97px;
+    margin-left: -10px;
+}
+
+div#lblnombre {
+    position: relative;
+    right: 97px;
+    top: 18px;
+    color: #585656;
+}
+
+#conetenedorlogo {
+    width: 200px;
+    height: 100px;
+    float: left;
+    margin-top: -10px;
+    border-radius: 5px;
+    padding-top: 0px;
+    padding-right: 97px;
+    margin-left: -10px;
+}   
+
+body {
+    background: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*carousel*/
+.carousel-item {
+    margin-top: 45%;
+}
+
+.carousel-inner .carousel-item img{
+    width: 100%;
+    height: 400px;
+}
+
+.texto-inicio {
+    align-items: center;
+    height: 70px;
+    margin-top: 135px;
+    justify-content: left;
+    align-items: left;
+    font: sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+.container-footer {
+    padding-top: 15px;
+    background: none;
+}
+
+/*Formularios*/
+form{
+    margin-left: 500px;
+    color: #fff;
+    
+}
+form button{
+    background-color: #1463CF;
+}
+
+
+.footer-contenido .separador-footer{
+    width: 200px;
+    margin-top: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.separador {
+    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-right: -25px;
+    margin-left: 15px;
+}
+
+.descripcion {
+    text-align: left;
+  }
+
+/*contenedores*/
+.container .row .col-6 {
+    width: 25%;
+    height: 50%;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 75px;
+    box-shadow: 0px 0px 15px 3px rgb(124, 123, 123);
+    transition-property: widht, height;
+    transition-timing-function:inherit;
+    transition-delay:0.8ms;
+    transition: all .5s ease-in-out;
+    overflow-x: hidden;
+  }
+
+.container:hover .row .col-6:hover {
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+}
+  
+.container .row .col-6 img{
+    margin-top: 10%;
+    margin-left: 45px;
+    width: 60%;
+    height: 80%;
+}
+
+.container .row .col-6 h5,h6{
+    margin-left: 0%;
+    margin-top: 5%;
+}
+
+/*Botones*/
+.btn-comprar {
+    width: 100%;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+    cursor: pointer;
+    letter-spacing: .2em;
+    border-radius: 10px;
+    display: inline-block;
+    transition-duration: .2s;
+    box-shadow: 0px 0px 15px 3px rgb(218, 213, 213); 
+    padding: 10px 16px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    appearance: auto;
+    position:relative;  
+    margin-top: 5%;
+}
+
+.btn-comprar-white {
+    background-color: #fff;
+    border: 2px solid #337ab7;
+    color: #337ab7!important;
+    box-sizing: inherit;
+}
+
+.add-to-cart {
+    outline: none!important;
+}
+
+#btn-comprar:hover{
+    background-color: #3770af;
+    color: #fff!important;
+}

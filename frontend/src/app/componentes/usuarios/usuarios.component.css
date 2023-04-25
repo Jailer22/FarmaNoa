@@ -1,0 +1,39 @@
+.ventanaflotante{
+    position: absolute;
+    background: linear-gradient(#6c96ce, #88bee2, #0c4f9c);
+    top:90px;
+    left:185px;
+    width: calc(100% - 185px);
+    height: calc(100vh - 90px);
+}
+
+img.imgprod {
+    width: 91px;
+    height: 91px;
+    border-radius: 9px;
+    padding: 2px;
+}
+
+.table-dark {
+   display: flexbox;
+    background-color: #212529;
+    text-align: center;
+    justify-content: left;
+}
+
+table, tr, th, td {
+    
+    border-collapse: collapse;
+}
+
+.fa-user-plus {
+    color: #03ad58;
+}
+
+.fa-user-pen{
+    color: #1984db;
+}
+
+.fa-user-minus{
+    color: rgb(206, 59, 59);
+}
