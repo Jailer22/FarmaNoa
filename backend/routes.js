@@ -4,11 +4,11 @@ const session = require("express-session")
 var usuarioscontroller = require(__dirname + '/controladores/usuarioscontroller.js').usuarios
 
 //middleware para verificación de tiempo de sesiones
-var validarsesion = function (request, response,next){
-    if(request.session.rol == undefined || request.session.rol == null || request.session.rol ==  ""){
-        response.json({state:false,mensaje:"Inicie sesión nuevamente",redireccion:true})
+var validarsesion = function (request, response, next) {
+    if (request.session.rol == undefined || request.session.rol == null || request.session.rol == "") {
+        response.json({ state: false, mensaje: "Inicie sesión nuevamente", redireccion: true })
         return false
-    }else{
+    } else {
         next()
     }
 }
@@ -16,170 +16,172 @@ var validarsesion = function (request, response,next){
 //Apis Usuarios
 
 //create
-app.post("/usuarios/guardar",function(request,response){
+app.post("/usuarios/guardar", function (request, response) {
     usuarioscontroller.guardar(request, response)
-}) 
+})
 
- //listar
-app.post("/usuarios/listar",validarsesion,function(request,response){
-    usuarioscontroller.listar (request,response)
+//listar
+app.post("/usuarios/listar", validarsesion, function (request, response) {
+    usuarioscontroller.listar(request, response)
 })
 
 //Modificar
-app.post("/usuarios/modificar",function(request,response){
-    usuarioscontroller.modificar (request,response)
+app.post("/usuarios/modificar", function (request, response) {
+    usuarioscontroller.modificar(request, response)
 })
 
 //Eliminar
-app.post("/usuarios/eliminar",function(request,response){
-   usuarioscontroller.eliminar (request, response)
+app.post("/usuarios/eliminar", function (request, response) {
+    usuarioscontroller.eliminar(request, response)
 })
 
 //listar por Id
-app.post("/usuarios/listarId", function(request,response){
-    usuarioscontroller.listarId (request,response)
+app.post("/usuarios/listarId", function (request, response) {
+    usuarioscontroller.listarId(request, response)
 })
 
 //login
-app.post("/usuarios/login",function(request,response){
-    usuarioscontroller.login(request,response)
+app.post("/usuarios/login", function (request, response) {
+    usuarioscontroller.login(request, response)
 })
 
 //Cerrar sesion
-app.post("/cerrarsesion",function(request,response){
+app.post("/cerrarsesion", function (request, response) {
     request.session.destroy()
-    response.json({state:true,mensajes:"Sesión cerrada"})
+    response.json({ state: true, mensajes: "Sesión cerrada" })
 })
 
 //ver cookie
-app.post("/usuarios/vercookies",function(request,response){
-    response.json({clave:request.session})
+app.post("/usuarios/vercookies", function (request, response) {
+    response.json({ clave: request.session })
 })
 
 //roles_usuarios
-app.post("/usuarios/menu_rol",validarsesion,function(request,response){
-    if(request.session.rol == 1){
-        response.json({state:true,datos:[
-            {nombre:'Dashboard',destino:'/dashboard'},
-            {nombre:'Usuarios',destino:'/usuarios'},
-            {nombre:'Agregar productos',destino:'/agregarprod'}]
+app.post("/usuarios/menu_rol", validarsesion, function (request, response) {
+    if (request.session.rol == 1) {
+        response.json({
+            state: true, datos: [
+                { nombre: 'Dashboard', destino: '/dashboard' },
+                { nombre: 'Usuarios', destino: '/usuarios' },
+                { nombre: 'Agregar productos', destino: '/agregarprod' }]
         })
     }
-    else
-        {response.json({state:false,datos:[
-            {nombre:'Dashboard',destino:'/dashboard'}
-        ]
-    })
+    else {
+        response.json({
+            state: false, datos: [
+                { nombre: 'Dashboard', destino: '/dashboard' }
+            ]
+        })
 
-}
+    }
 
 })
 
 //activar cuenta
-app.get("/activar/:email/:Cod_activacion",function(request,response){
-    usuarioscontroller.Activarcuenta(request,response)
+app.get("/activar/:email/:Cod_activacion", function (request, response) {
+    usuarioscontroller.Activarcuenta(request, response)
 })
 
 //ApiProductos 
 var ProductosController = require(__dirname + '/controladores/ProductosController.js').Productos
 
 //create
-app.post("/Productos/guardar",function(request,response){
+app.post("/Productos/guardar", function (request, response) {
     ProductosController.guardar(request, response)
 })
 
- //listar
-app.post("/Productos/listar", function(request,response){
-    ProductosController.listar (request,response)
+//listar
+app.post("/Productos/listar", function (request, response) {
+    ProductosController.listar(request, response)
 })
 
 //Modificar
-app.post("/Productos/modificar",function(request,response){
-    ProductosController.modificar (request,response)
+app.post("/Productos/modificar", function (request, response) {
+    ProductosController.modificar(request, response)
 })
 
 //Eliminar
-app.post("/Productos/eliminar",function(request,response){
-   ProductosController.eliminar (request, response)
+app.post("/Productos/eliminar", function (request, response) {
+    ProductosController.eliminar(request, response)
 })
 
 //listar por Id
-app.post("/Productos/listarId", function(request,response){
-    ProductosController.listarId (request,response)
+app.post("/Productos/listarId", function (request, response) {
+    ProductosController.listarId(request, response)
 })
 
 //Apis files(imagenes, archivos, musica)
-const multer = require ("multer")
+const multer = require("multer")
 global.path = require('path')
 
-app.post('/subir/:name',function(req,res){
+app.post('/subir/:name', function (req, res) {
     console.log(req.params)
     var post = {
-        ruta:"/ImagenesProductos"
+        ruta: "/ImagenesProductos"
     }
-    
-    var upload = multer ({
+
+    var upload = multer({
         storage: multer.diskStorage({
-            destination:function(req,file,callback){
-                callback(null,__dirname + post.ruta)
+            destination: function (req, file, callback) {
+                callback(null, __dirname + post.ruta)
             },
-            filename:function(req,file,callback){
+            filename: function (req, file, callback) {
                 var ext = path.extname(file.originalname)
-                callback(null,req.params.name + ext)
+                callback(null, req.params.name + ext)
             }
         }),
-        fileFilter: function(req,file,callback){
+        fileFilter: function (req, file, callback) {
             var ext = path.extname(file.originalname)
-            if(ext !== '.png'){
-                return callback({state:false,mensaje:"Archivo no permitido"},null)
+            if (ext !== '.png') {
+                return callback({ state: false, mensaje: "Archivo no permitido" }, null)
             }
-            callback(null,true)
+            callback(null, true)
         }
     }).single('userFile')
 
-    upload(req,res,function(err){
-        if(err){
+    upload(req, res, function (err) {
+        if (err) {
             res.json(err)
         }
-        else{
+        else {
             console.log('ok')
-            res.json({state:true,mensaje:"Archivo cargado"})
+            res.json({ state: true, mensaje: "Archivo cargado" })
         }
     })
 })
 
-app.post('/ImagenesProductos/:name',function(req,res){
+app.post('/ImagenesProductos/:name', function (req, res) {
     console.log(req.params)
     var post = {
-        ruta:"/ImagenesProductos"
+        ruta: "/ImagenesProductos"
     }
-    
-    var upload = multer ({
+
+    var upload = multer({
         storage: multer.diskStorage({
-            destination:function(req,file,callback){
-                callback(null,__dirname + post.ruta)
+            destination: function (req, file, callback) {
+                callback(null, __dirname + post.ruta)
             },
-            filename:function(req,file,callback){
+            filename: function (req, file, callback) {
                 var ext = path.extname(file.originalname)
-                callback(null,req.params.name + ext)
+                callback(null, req.params.name + ext)
             }
         }),
-        fileFilter: function(req,file,callback){
+        fileFilter: function (req, file, callback) {
             var ext = path.extname(file.originalname)
-            if(ext !== '.png' &&  ext !== '.jpg'){
-                return callback({state:false,mensaje:"Archivo no permitido"},null)
+            if (ext !== '.png' && ext !== '.jpg') {
+                return callback({ state: false, mensaje: "Archivo no permitido" }, null)
             }
-            callback(null,true)
+            callback(null, true)
         }
     }).single('userFile')
 
-    upload(req,res,function(err){
-        if(err){
+    upload(req, res, function (err) {
+        if (err) {
             res.json(err)
         }
-        else{
+        else {
             console.log('res')
-            res.json({state:true,mensaje:"Archivo cargado"})
+            res.json({ state: true, mensaje: "Archivo cargado" })
         }
     })
 })
@@ -188,23 +190,23 @@ app.post('/ImagenesProductos/:name',function(req,res){
 //ApiProductos 
 var CarritoController = require(__dirname + '/controladores/CarritoController.js').carrito
 
-app.post("/carrito/guardar",function(request,response){
+app.post("/carrito/guardar", function (request, response) {
     CarritoController.guardar(request, response)
 })
 
 //listar
-app.post("/carrito/listar", function(request,response){
-    CarritoController.listar(request,response)
+app.post("/carrito/listar", function (request, response) {
+    CarritoController.listar(request, response)
 })
 
 //Modificar
-app.post("/carrito/modificar",function(request,response){
-    CarritoController.modificar (request,response)
+app.post("/carrito/modificar", function (request, response) {
+    CarritoController.modificar(request, response)
 })
 
 //Eliminar
-app.post("/carrito/eliminar",function(request,response){
-   CarritoController.eliminar (request, response)
+app.post("/carrito/eliminar", function (request, response) {
+    CarritoController.eliminar(request, response)
 })
 
 

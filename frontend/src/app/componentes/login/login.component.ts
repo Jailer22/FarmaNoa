@@ -60,13 +60,14 @@ return true
           }
           else {
            // this.msj.Load("success",respuesta.mensaje,5000)
-            this.router.navigate(['/dashboard'])
+           
             swal({
               title: "Bienvenido!",
               text: "Has iniciado sesión correctamente!",
               icon: "success",
               button: "Ok",
             });
+            this.router.navigate(['/dashboard'])
           } 
         }
       )

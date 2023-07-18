@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class ContactoComponent {
 
-  constructor(){
+  constructor() {
   }
 
-  ngOnInit(){
+  ngOnInit() {
   }
 
-  Nombres:string = ""
-  Apellidos:string = ""
-  Correo:string = ""
-  mensaje:string = ""
+  Nombres: string = ""
+  Apellidos: string = ""
+  Correo: string = ""
+  mensaje: string = ""
 
 }
